@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/node-modules/node-homedir#readme",
   "devDependencies": {
-    "egg-ci": "~1.0.3",
     "eslint": "3",
     "eslint-config-egg": "3",
     "intelli-espower-loader": "^1.0.1",
@@ -35,7 +34,8 @@
     "power-assert": "^1.4.1"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "README.md"
   ],
   "engines": {
     "node": ">=4.0.0"
