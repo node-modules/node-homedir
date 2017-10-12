@@ -4,8 +4,8 @@
   "description": "Get the effective user's homedir.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && mocha -t 15000 -r intelli-espower-loader test/*.test.js",
-    "test-cov": "istanbul cover _mocha -- -t 15000 -r intelli-espower-loader test/*.test.js",
+    "test": "npm run lint && mocha -r intelli-espower-loader test/*.test.js",
+    "test-cov": "nyc mocha -r intelli-espower-loader test/*.test.js",
     "lint": "eslint test *.js",
     "ci": "npm run lint && npm run test-cov"
   },
@@ -28,9 +28,9 @@
     "eslint": "3",
     "eslint-config-egg": "3",
     "intelli-espower-loader": "^1.0.1",
-    "istanbul": "*",
     "mm": "^2.0.0",
     "mocha": "*",
+    "nyc": "^11.2.1",
     "power-assert": "^1.4.1"
   },
   "files": [
