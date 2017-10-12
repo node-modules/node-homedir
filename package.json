@@ -1,6 +1,6 @@
 {
   "name": "node-homedir",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Get the effective user's homedir.",
   "main": "index.js",
   "scripts": {
