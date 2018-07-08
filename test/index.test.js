@@ -1,8 +1,9 @@
 'use strict';
 
-const homedir = require('../');
+const homedir = require('..');
 const fs = require('fs');
 const mm = require('mm');
+const os = require('os');
 const assert = require('power-assert');
 
 describe('index.test.js', () => {
@@ -22,5 +23,15 @@ describe('index.test.js', () => {
   it('should return MOCK_HOME_DIR when exist', () => {
     mm(process.env, 'MOCK_HOME_DIR', '/tmp');
     assert(homedir() === '/tmp');
+  });
+
+  it('should return homedir when os.userInfo() throw ENOENT error', () => {
+    mm(os, 'userInfo', () => {
+      const err = new Error('no such file or directory, uv_os_get_passwd');
+      err.code = 'ENOENT';
+      throw err;
+    });
+
+    assert.ok(fs.existsSync(homedir()));
   });
 });

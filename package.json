@@ -34,13 +34,12 @@
     "power-assert": "^1.4.1"
   },
   "files": [
-    "index.js",
-    "README.md"
+    "index.js"
   ],
   "engines": {
     "node": ">=4.0.0"
   },
   "ci": {
-    "version": "4, 6"
+    "version": "4, 6, 8, 10"
   }
 }
