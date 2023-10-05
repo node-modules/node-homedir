@@ -29,7 +29,7 @@ Aways return the homedir of the current executor， even execute with `sudo -u [
 ## Installation
 
 ```bash
-$ npm install node-homedir --save
+$ npm install node-homedir@latest-1
 ```
 
 ## Usage
