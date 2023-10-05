@@ -1,15 +1,13 @@
-'use strict';
+import os from 'node:os';
 
-const os = require('os');
-
-module.exports = () => {
+export function homedir(): string {
   if (process.env.MOCK_HOME_DIR) return process.env.MOCK_HOME_DIR;
 
   if (typeof os.userInfo === 'function') {
     try {
       const homedir = os.userInfo().homedir;
       if (homedir) return homedir;
-    } catch (err) {
+    } catch (err: any) {
       if (err.code !== 'ENOENT') throw err;
     }
   }
@@ -18,5 +16,7 @@ module.exports = () => {
     return os.homedir();
   }
 
-  return process.env.HOME;
-};
+  return process.env.HOME!;
+}
+
+export default homedir;
