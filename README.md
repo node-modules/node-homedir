@@ -2,7 +2,7 @@
 
 Get the effective user's homedir, if Node.js >= v16.0.0 .
 
-Always return the homedir of the current executor， even execute with `sudo -u [user] node app.js` without `-i`.
+Always return the homedir of the current executor, even execute with `sudo -u [user] node app.js` without `-i`.
 
 [Reference Issue](https://github.com/nodejs/node/issues/5582)
 
