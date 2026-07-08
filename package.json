@@ -35,7 +35,7 @@
     "mm": "^3.3.0",
     "tshy": "^1.2.2",
     "tshy-after": "^1.0.0",
-    "typescript": "^5.2.2"
+    "typescript": "^7.0.0"
   },
   "files": [
     "dist",
